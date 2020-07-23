@@ -6,7 +6,7 @@ export const simplify = (path: string) => {
     .forEach((element) => {
       if (element === "..") {
         pathStack.pop();
-      } else {
+      } else if (element !== ".") {
         pathStack.push(element);
       }
     });
