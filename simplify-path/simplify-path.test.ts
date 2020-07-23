@@ -13,6 +13,6 @@ describe("simplify path", () => {
   });
 
   it("finds shortest path to folder", () => {
-    expect(simplify("/a/../c")).toEqual("/c");
+    expect(simplify("/a/../c/")).toEqual("/c");
   });
 });

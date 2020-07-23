@@ -1,8 +1,15 @@
 export const simplify = (path: string) => {
-  path = path.replace(/\/\//g, "/");
+  const pathStack: string[] = [];
+  path
+    .split("/")
+    .filter((n) => n)
+    .forEach((element) => {
+      if (element === "..") {
+        pathStack.pop();
+      } else {
+        pathStack.push(element);
+      }
+    });
 
-  if (path === "/../") {
-    return "/";
-  }
-  return path.slice(0, -1);
+  return `/${pathStack.join("/")}`;
 };
