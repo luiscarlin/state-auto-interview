@@ -1,8 +1,7 @@
 {
-  "name": "javascript-interview-problems",
+  "name": "state-auto-interview",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:luiscarlin/javascript-interview-problems.git",
   "author": "Luis Carlin <luiscarlin@gmail.com>",
   "license": "MIT",
   "scripts": {
