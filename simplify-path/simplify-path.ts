@@ -1,15 +1,16 @@
 export const simplify = (path: string) => {
-  const pathStack: string[] = [];
-  path
+  const canonicalPath = path
     .split("/")
     .filter((n) => n)
-    .forEach((element) => {
+    .reduce((acc, element) => {
       if (element === "..") {
-        pathStack.pop();
+        acc.pop();
       } else if (element !== ".") {
-        pathStack.push(element);
+        acc.push(element);
       }
-    });
+      return acc;
+    }, [] as string[])
+    .join("/");
 
-  return `/${pathStack.join("/")}`;
+  return `/${canonicalPath}`;
 };
