@@ -1,6 +1,5 @@
 import { mocked } from "ts-jest/utils";
 import { getSeat } from "./airplaneProblem";
-// import * as getRandomNumber from "./getRandomNumber";
 import { getRandomNumber } from "./getRandomNumber";
 
 jest.mock("./getRandomNumber");
