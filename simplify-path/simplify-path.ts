@@ -1,7 +1,7 @@
 export const simplify = (path: string) => {
   const canonicalPath = path
     .split("/")
-    .filter((n) => n)
+    .filter(String)
     .reduce((acc, element) => {
       if (element === "..") {
         acc.pop();
