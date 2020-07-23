@@ -5,8 +5,10 @@
   "author": "Luis Carlin <luiscarlin@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "tsc": "tsc",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "ci": "yarn tsc && yarn test --coverage"
   },
   "jest": {
     "transform": {
