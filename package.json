@@ -1,0 +1,23 @@
+{
+  "name": "javascript-interview-problems",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:luiscarlin/javascript-interview-problems.git",
+  "author": "Luis Carlin <luiscarlin@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    }
+  },
+  "dependencies": {
+    "@types/jest": "^26.0.5",
+    "jest": "^26.1.0",
+    "ts-jest": "^26.1.3",
+    "typescript": "^3.9.7"
+  }
+}
