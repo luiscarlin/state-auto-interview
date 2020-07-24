@@ -6,7 +6,10 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "prebuild": "rm -rf ./dist",
+    "build": "tsc",
+    "simulate": "node ./dist/run.js"
   },
   "jest": {
     "transform": {
