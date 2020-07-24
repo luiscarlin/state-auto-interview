@@ -9,4 +9,4 @@ jobs:
       - name: Install dependencies
         run: yarn
       - name: Run tests
-        run: yarn ci
+        run: yarn test
