@@ -1,8 +1,8 @@
-import { getRandomNumber } from "./getRandomNumber";
+import { getRandomNumberFromList } from "./getRandomNumber";
 
-describe("getRandomNumber", () => {
-  it("returns a random number between 0 and passed in number", () => {
+describe("getRandomNumberFromList", () => {
+  it("returns a random number from a list", () => {
     Math.random = jest.fn(() => 0.5);
-    expect(getRandomNumber(4)).toEqual(2);
+    expect(getRandomNumberFromList([1, 4, 5])).toEqual(4);
   });
 });
