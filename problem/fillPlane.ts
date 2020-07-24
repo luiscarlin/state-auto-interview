@@ -14,12 +14,12 @@ export const getSeat = (availableSeats: number[], passenger: number) => {
   };
 };
 
-export const fillPlane = () => {
-  let availableSeats = Array(100)
+export const fillPlane = (numberSeats: number) => {
+  let availableSeats = Array(numberSeats)
     .fill(-1)
     .map((_, index) => index);
 
-  const plane = Array(100).fill(-1);
+  const plane = Array(numberSeats).fill(-1);
 
   const seatsWithoutFirst = [...availableSeats];
   seatsWithoutFirst.shift();
@@ -29,7 +29,7 @@ export const fillPlane = () => {
 
   availableSeats = [0, ...updatedAvailableSeats];
 
-  for (let passenger = 1; passenger < 100; passenger += 1) {
+  for (let passenger = 1; passenger < numberSeats; passenger += 1) {
     const result = getSeat(availableSeats, passenger);
 
     plane[passenger] = result.seat;

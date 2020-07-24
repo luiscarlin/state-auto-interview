@@ -7,13 +7,13 @@ const getRandomNumberFromListMock = mocked(getRandomNumberFromList);
 
 describe("fillPlane", () => {
   it("sits first passenger on different seat from pre-assigned", () => {
-    const plane = fillPlane();
+    const plane = fillPlane(5);
 
     expect(plane[0]).not.toEqual(0);
   });
 
   it("returns a plane with 100 passengers", () => {
-    expect(fillPlane().length).toEqual(100);
+    expect(fillPlane(100).length).toEqual(100);
   });
 
   describe("getSeat", () => {
